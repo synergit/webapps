@@ -1,0 +1,9 @@
+{% if latest_course_list %}
+    <ul>
+    {% for a in latest_course_list %}
+        <li><a href="/registration/{{ a.id }}/">{{ a.course_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No courses are available.</p>
+{% endif %}
