@@ -11,7 +11,9 @@ def index(request):
         print(a.id, a.course_name, a.created_at) 
     template = loader.get_template('registration/index.html')
     # print(type(template))
-    context = {'latest_course_list':latest_course_list,}
+    context = {
+        'latest_course_list':latest_course_list,
+    }
     # output = ', '.join([c.course_name for c in latest_course_list])
     return HttpResponse(template.render(context, request))
 
@@ -24,4 +26,4 @@ def results(request, course_id):
     return HttpResponse(response % course_id)
 
 def register(request, course_id):
-    return HttpResponse("You're registering on question %s." % course_id)
+    return HttpResponse("You're registering on course %s." % course_id)
