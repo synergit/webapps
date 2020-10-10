@@ -2,12 +2,13 @@ from django.urls import path
 
 from . import views
 
+app_name='registration'
 urlpatterns = [
     path('', views.index, name='index'),
-    # ex: /polls/5/
+    # ex: /registration/5/
     path('<int:course_id>/', views.detail, name='detail'),
-    # ex: /polls/5/results/
+    # ex: /registration/5/results/
     path('<int:course_id>/results/', views.results, name='results'),
-    # ex: /polls/5/vote/
+    # ex: /registration/5/vote/
     path('<int:course_id>/register/', views.register, name='register'),
 ]

@@ -1,0 +1,9 @@
+<!-- {{ course }} -->
+
+<h1>{{ course.course_name }}</h1>
+<h2>Student List</h2>
+<ul>
+{% for c in course.student_set.all %}
+    <li>{{ c.student_name }}</li>
+{% endfor %}
+</ul>
