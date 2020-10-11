@@ -1,3 +1,7 @@
 comenzando/comenzando/config.yaml
+comenzando/db.sqlite3
+
 .DS_Store
-comenzando/comenzando/__pycache__/
+
+__pycache__/
+

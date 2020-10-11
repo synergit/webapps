@@ -1,0 +1,18 @@
+<h1>{{ course.course_name }}</h1>
+<h2>Student List</h2>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<!-- <ul>
+{% for c in course.student_set.all %}
+    <li>{{ c.student_name }}</li>
+{% endfor %}
+</ul> -->
+
+<form action="{% url 'registration:like' course.id %}" method="post">
+{% csrf_token %}
+{% for student in course.student_set.all %}
+    <input type="radio" name="student" id="student{{ forloop.counter }}" value="{{ student.id }}">
+    <label for="student{{ forloop.counter }}">{{ student.student_name }}</label><br>
+{% endfor %}
+<input type="submit" value="Like">
+</form>

@@ -1,0 +1,8 @@
+
+<ul>
+    {% for student in course.student_set.all %}
+        <li>{{ student.student_name }} -- {{ student.student_likes }} like{{ student.likess|pluralize }}</li>
+    {% endfor %}
+</ul>
+    
+<a href="{% url 'registration:detail' course.id %}">Like again?</a>
