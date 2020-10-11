@@ -4,11 +4,8 @@ from . import views
 
 app_name='registration'
 urlpatterns = [
-    path('', views.index, name='index'),
-    # ex: /registration/5/
-    path('<int:course_id>/', views.detail, name='detail'),
-    # ex: /registration/5/results/
-    path('<int:course_id>/results/', views.results, name='results'),
-    # ex: /registration/5/like/
+    path('', views.IndexView.as_view(), name='index'),
+    path('<int:pk>/', views.DetailView.as_view(), name='detail'),
+    path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
     path('<int:course_id>/like/', views.like, name='like'),
 ]
