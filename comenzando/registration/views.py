@@ -43,3 +43,4 @@ def like(request, course_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('registration:results', args=(course.id,)))
+        
