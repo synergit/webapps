@@ -9,6 +9,10 @@ class Course(models.Model):
     created_at = models.DateTimeField('course created')
     def was_created_recently(self):
         return timezone.now() >= self.created_at >= timezone.now() - datetime.timedelta(days=1)
+    was_created_recently.admin_order_field = 'created_at'
+    was_created_recently.boolean = True
+    was_created_recently.short_description = 'Created recently?'
+
     def __str__(self):
         return self.course_name
 
