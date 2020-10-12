@@ -1,7 +1,6 @@
 from django.http import HttpResponseRedirect
-# from django.http import Http404
+from django.utils import timezone
 from django.shortcuts import get_object_or_404, render
-# from django.template import loader
 from django.urls import reverse
 from django.views import generic
 
@@ -12,11 +11,19 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_course_list'
 
     def get_queryset(self):
-        return Course.objects.order_by('-created_at')[:5]
+        return Course.objects.filter(
+                created_at__lte=timezone.now()
+            ).order_by('-created_at')[:5]
 
 class DetailView(generic.DetailView):
     model = Course
     template_name = 'registration/detail.html'
+
+    def get_queryset(self):
+        """
+        Excludes any courses that aren't published yet.
+        """
+        return Course.objects.filter(created_at__lte=timezone.now())
 
 class ResultsView(generic.DetailView):
     model = Course
