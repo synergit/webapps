@@ -16,3 +16,10 @@
 {% endfor %}
 <input type="submit" value="Like">
 </form>
+
+<form action="{% url 'registration:add_name' course.id%}" method="post">
+{% csrf_token %}
+    <label for="s_name">student name: </label>
+    <input id="s_name" type="text" name="s_name" value="{{ current_name }}">
+    <input type="submit" value="OK">
+</form>
