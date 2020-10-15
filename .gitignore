@@ -6,3 +6,4 @@ comenzando/db.sqlite3
 __pycache__/
 
 comenzando/.coverage
+comenzando/.vscode
