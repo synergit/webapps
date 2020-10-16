@@ -5,5 +5,9 @@ comenzando/db.sqlite3
 
 __pycache__/
 
+# comenando
 comenzando/.coverage
 comenzando/.vscode
+
+# geektime
+geektime/hxnyc/hxnyc/config.yaml
