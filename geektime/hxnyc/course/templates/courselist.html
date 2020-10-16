@@ -5,7 +5,7 @@ Welcome to HXNYC
 {% if course_list %}
     <ul>
         {% for course in course_list %}
-        <li> {{course_type}} <a href="/course/{{course.id}}" style="color:blue">{{ course.course_name}}</a></li>
+        <li> {{course_type}} <a href="/course/{{course.id}}" style="color:blue">{{ course.course_name}}</a> <a>{{course.course_type}}</a></li>
         {% endfor %}
     </ul>
 

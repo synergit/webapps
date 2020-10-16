@@ -13,7 +13,7 @@ def courselist(request):
 
     context = {'course_list': course_list}
     for course in course_list:
-        course.type_name = CourseTypes[course.course_type][1]
+        course.course_type = CourseTypes[course.course_type][1]
     return HttpResponse(template.render(context))
 
 
