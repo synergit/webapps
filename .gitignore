@@ -8,6 +8,7 @@ __pycache__/
 # comenando
 comenzando/.coverage
 comenzando/.vscode
+comenzando/local-env/*
 
 # geektime
 geektime/hxnyc/hxnyc/config.yaml
@@ -15,5 +16,6 @@ geektime/.idea/*
 geektime/hxnyc/db.sqlite3
 
 # temporary files to be ignore for now
+django/*
 recruitment.admin.log
 recruitment.performance.log
