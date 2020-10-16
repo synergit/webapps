@@ -11,3 +11,9 @@ comenzando/.vscode
 
 # geektime
 geektime/hxnyc/hxnyc/config.yaml
+geektime/.idea/*
+geektime/hxnyc/db.sqlite3
+
+# temporary files to be ignore for now
+recruitment.admin.log
+recruitment.performance.log
