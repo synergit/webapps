@@ -12,6 +12,7 @@ comenzando/local-env/*
 
 # geektime
 geektime/hxnyc/hxnyc/secret_key.py
+geektime/hxnyc/local-dev/
 geektime/.idea/*
 geektime/hxnyc/db.sqlite3
 
