@@ -11,7 +11,7 @@ comenzando/.vscode
 comenzando/local-env/*
 
 # geektime
-geektime/hxnyc/hxnyc/config.yaml
+geektime/hxnyc/hxnyc/secret_key.py
 geektime/.idea/*
 geektime/hxnyc/db.sqlite3
 
