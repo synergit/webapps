@@ -112,10 +112,10 @@ WSGI_APPLICATION = 'hxnyc.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'hxnyc',
         'USER': 'postgres',
-        'HOST': 'db', # set in docker-compose.yml
-        'PORT': 5432 # default postgres port
+        'PASSWORD': '123',
+        'HOST': 'localhost'
     }
 }
 

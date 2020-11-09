@@ -17,4 +17,3 @@ django-smart-selects==1.5.9
 django-debug-toolbar==3.1.1
 Pillow==7.0.0
 django-simpleui==2020.9.26
-PyYAML==5.3.1
